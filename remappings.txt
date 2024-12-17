@@ -1,0 +1,3 @@
+@superfuse-core/=src/
+@superfuse-deploy/=script/
+@scripts/=script/example/
