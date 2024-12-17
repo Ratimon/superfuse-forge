@@ -17,9 +17,9 @@ Please make a pull request to [Dev Branch](https://github.com/Ratimon/superfuse-
 
 ```bash
 git add .
-git commit -am "v0.0.1"
+git commit -am "v0.0.2"
 git push -u origin main
-git tag v0.0.1 main
+git tag v0.0.2 main
 git push origin tag v0.0.2
 ```
 >[!WARNING]
