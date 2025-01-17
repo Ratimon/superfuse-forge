@@ -27,7 +27,16 @@
     "url": "https://github.com/Ratimon/superfuse-forge"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
-  
+    "---------------------- USER WORKFLOW ----------------------": "",
+    "postinstall": "forge install --no-git forge-std-v1.9.1=foundry-rs/forge-std@v1.9.1 ethereum-optimism/optimism@v1.10.0 solady-v0.0.292=Vectorized/solady@v0.0.292 openzeppelin-v0.4.7.3=openzeppelin/openzeppelin-contracts@v4.7.3 openzeppelin-v0.5.0.2=openzeppelin/openzeppelin-contracts@v5.0.2 || echo ''",
+    "---------------------- DEV WORKFLOW ----------------------": "",
+    "prepare": "rm -rf lib/ && set-defaults .vscode && forge install --no-git forge-std-v1.9.1=foundry-rs/forge-std@v1.9.1 ethereum-optimism/optimism@v1.10.0 solady-v0.0.292=Vectorized/solady@v0.0.292 openzeppelin-v0.4.7.3=openzeppelin/openzeppelin-contracts@v4.7.3 openzeppelin-v0.5.0.2=openzeppelin/openzeppelin-contracts@v5.0.2 || echo '' ",
+    "build": "forge build",
+    "clean": "rm -rf cache out",
+    "test": "forge test"
+  },
+  "devDependencies": {
+    "set-defaults": "^0.0.2"
+  },
+  "packageManager": "pnpm@9.6.0+sha256.dae0f7e822c56b20979bb5965e3b73b8bdabb6b8b8ef121da6d857508599ca35"
 }

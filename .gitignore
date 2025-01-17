@@ -2,6 +2,7 @@
 cache/
 out/
 
+
 # Ignores development broadcast logs
 !/broadcast
 /broadcast/*/31337/
@@ -12,3 +13,11 @@ docs/
 
 # Dotenv file
 .env
+.env.testnet
+
+# forge: we do not use submodule instead we specify dependencies in package.json `prepare` script
+# if you use git and want to make use of the submodule
+# delete that line and execute `just reinstall git`
+/lib
+# npm
+node_modules/
