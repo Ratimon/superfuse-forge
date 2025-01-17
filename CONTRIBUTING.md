@@ -10,6 +10,10 @@ Please make a pull request to [Dev Branch](https://github.com/Ratimon/superfuse-
 
 #### For First Time
 
+```bash
+npm publish
+```
+
 #### For Second Time
 
 >[!WARNING]

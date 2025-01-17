@@ -4,6 +4,12 @@ script = "script"
 out = "out"
 libs = ["lib", "node_modules"]
 solc_version = '0.8.25'
+fs_permissions = [
+    { access = 'read-write', path = './deployments/' },
+    { access = 'read', path = './configs' },
+    { access = 'read', path = './test' },
+    { access = 'write', path = './deployment.json' },
+]
 
 [fmt]
 bracket_spacing = true
