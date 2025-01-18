@@ -1,11 +1,10 @@
 @superfuse-core/=src/
 @main/=src/
-@superfuse-test/=test/
 @superfuse-deploy/=script/
+@superfuse-test/=test/
 @script/=script/
 
 @forge-std-v1.9.1/=lib/forge-std-v1.9.1/src/
-
 @solady-v0.0.292/=lib/solady-v0.0.292/src/
 
 @openzeppelin-v0.4.7.3/=lib/openzeppelin-v0.4.7.3/contracts/
