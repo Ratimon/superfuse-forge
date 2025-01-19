@@ -89,7 +89,7 @@ cp node_modules/superfuse-forge/script/* script/
 
 Now, copy a test suite:
 ```sh
-cp node_modules/superfuse-forge/test/DeployAll.t.sol test/
+cp node_modules/superfuse-forge/test/* test/
 ```
 
 6. Compile and run test:
