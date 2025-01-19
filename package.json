@@ -1,7 +1,7 @@
 {
   "name": "superfuse-forge",
   "description": "A developer-friendly framework/library in solidity to modify & deploy cross-chain=based contracts in a modular style.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "https://github.com/Ratimon/superfuse-forge#readme",
   "keywords": [
     "blockchain",
