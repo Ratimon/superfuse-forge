@@ -51,8 +51,6 @@ pnpm add superfuse-forge
 
 @openzeppelin-v0.4.7.3/=node_modules/superfuse-forge/lib/openzeppelin-v0.4.7.3/contracts/
 @openzeppelin-v0.5.0.2/=node_modules/superfuse-forge/lib/openzeppelin-v0.5.0.2/contracts/
-
-@contracts-bedrock/=node_modules/superfuse-forge/lib/optimism/packages/contracts-bedrock/src/
 ```
 
 >[!TIP]

@@ -6,7 +6,6 @@ import {ERC20} from "@solady-v0.0.292/tokens/ERC20.sol";
 import {IDeployer, getDeployer} from "@superfuse-deploy/deployer/DeployScript.sol";
 import {IERC20} from "@openzeppelin-v0.5.0.2/token/ERC20/IERC20.sol";
 import {IERC7802} from "@superfuse-core/interfaces/L2/IERC7802.sol";
-import {IOwnable} from "@contracts-bedrock/universal/interfaces/IOwnable.sol";
 import {ISuperchainERC20} from "@superfuse-core/interfaces/L2/ISuperchainERC20.sol";
 import {L2NativeSuperchainERC20} from "@main/L2NativeSuperchainERC20.sol";
 import {Ownable} from "@solady-v0.0.292/auth/Ownable.sol";
@@ -147,7 +146,7 @@ contract L2NativeSuperchainERC20Test is Test {
 
     function testRenounceOwnership() public {
         vm.expectEmit(true, true, true, true);
-        emit IOwnable.OwnershipTransferred(owner, address(0));
+        emit Ownable.OwnershipTransferred(owner, address(0));
 
         vm.prank(owner);
         l2NativeSuperchainERC20.renounceOwnership();
@@ -159,7 +158,7 @@ contract L2NativeSuperchainERC20Test is Test {
         vm.assume(_newOwner != ZERO_ADDRESS);
 
         vm.expectEmit(true, true, true, true);
-        emit IOwnable.OwnershipTransferred(owner, _newOwner);
+        emit Ownable.OwnershipTransferred(owner, _newOwner);
 
         vm.prank(owner);
         l2NativeSuperchainERC20.transferOwnership(_newOwner);
