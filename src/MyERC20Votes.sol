@@ -2,11 +2,11 @@
 pragma solidity ^0.8.25;
 
 import {ERC20} from "@openzeppelin-v0.5.0.2/token/ERC20/ERC20.sol";
-import {ERC20Permit} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
-import {ERC20Votes} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
+import {ERC20Permit} from "@openzeppelin-v0.5.0.2/token/ERC20/extensions/ERC20Permit.sol";
+import {ERC20Votes} from "@openzeppelin-v0.5.0.2/token/ERC20/extensions/ERC20Votes.sol";
 import {IERC20} from "@openzeppelin-v0.5.0.2/token/ERC20/IERC20.sol";
 import {IERC7802, IERC165} from "@superfuse-core/interfaces/L2/IERC7802.sol";
-import {Nonces} from "@openzeppelin/contracts/utils/Nonces.sol";
+import {Nonces} from "@openzeppelin-v0.5.0.2/utils/Nonces.sol";
 import {Predeploys} from "@superfuse-core/libraries/Predeploys.sol";
 import {Unauthorized} from "@superfuse-core//libraries/errors/CommonErrors.sol";
 

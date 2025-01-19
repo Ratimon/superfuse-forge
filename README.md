@@ -26,25 +26,44 @@ pnpm install
 1. Set your working environment with **foundry** : 
 
 ```bash
-forge init my-project;
+forge init my-project
 ``` 
 
 2.  Add the `superfuse-forge` using your favorite package manager, e.g., with Yarn or pnpm:
 
-
 ```sh
 yarn add -D superfuse-forge
 ```
+or
 ```sh
 pnpm add superfuse-forge
 ```
 
-3. Adding `remappings.txt` with following line:
+3. Configure permission and remapping (e.g. with txt" for `remappings.txt`) by modifing:
+
+```diff
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
++solc_version = '0.8.25'
++fs_permissions = [
++    { access = 'read-write', path = './deployments/' },
++    { access = 'read', path = './configs' },
++    { access = 'read', path = './test' },
++    { access = 'write', path = './deployment.json' },
++]
+
++[soldeer]
++remappings_location = "txt"
+```
+
+Then, add `remappings.txt` with following lines:
 
 ```txt
 @superfuse-core/=node_modules/superfuse-forge/src
 @superfuse-deploy/=node_modules/superfuse-forge/script
-@superfuse-test/=node_modules/test/
+@superfuse-test/=node_modules/superfuse-forge/test/
 
 @forge-std-v1.9.1/=node_modules/superfuse-forge/lib/forge-std-v1.9.1/src/
 @solady-v0.0.292/=node_modules/superfuse-forge/lib/solady-v0.0.292/src/
@@ -76,18 +95,41 @@ DEPLOYER_ADDRESS=0x70997970C51812dc3A010C7d01b50e0d17dc79C8
 +node_modules/
 ```
 
-5. Copy a set of deploy scripts example except [`/deployer`](./script/deployer/):
+5. Copy a set of smart contract including main contracts deploy scripts and test suites 
+
+```sh
+rsync -av --exclude='interfaces/' --exclude='L2/' --exclude='libraries/' node_modules/superfuse-forge/src/ src/
+```
+
+>[!NOTE]
+>  we, for this example, also need to reconfigue the new remapping:
+
+```diff
+# ...
++@main/=src/
++@script/=script/
+@superfuse-core/=node_modules/superfuse-forge/src
+@superfuse-deploy/=node_modules/superfuse-forge/script
+@superfuse-test/=node_modules/superfuse-forge/test/
+
+@forge-std-v1.9.1/=node_modules/superfuse-forge/lib/forge-std-v1.9.1/src/
+@solady-v0.0.292/=node_modules/superfuse-forge/lib/solady-v0.0.292/src/
+
+@openzeppelin-v0.4.7.3/=node_modules/superfuse-forge/lib/openzeppelin-v0.4.7.3/contracts/
+@openzeppelin-v0.5.0.2/=node_modules/superfuse-forge/lib/openzeppelin-v0.5.0.2/contracts/
+```
+
+>[!TIP]
+> You may choose your own remapping convention that suites your needs best!!!
+
+For Deploy script, we now want to exclude [`/deployer`](./script/deployer/):
 
 ```sh
 rsync -av --exclude='deployer/' node_modules/superfuse-forge/script/ script/
 ```
 
-Alternatively:
-```sh
-cp node_modules/superfuse-forge/script/* script/
-```
-
 Now, copy a test suite:
+
 ```sh
 cp node_modules/superfuse-forge/test/* test/
 ```
