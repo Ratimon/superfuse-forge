@@ -27,16 +27,17 @@ pnpm install
 
 ```bash
 forge init my-project
+cd my-project
 ``` 
 
-2.  Add the `superfuse-forge` using your favorite package manager, e.g., with Yarn or pnpm:
+2.  Add the `superfuse-forge` using your favorite package manager, e.g., with pnpm or Yarn:
 
 ```sh
-yarn add -D superfuse-forge
+pnpm add superfuse-forge
 ```
 or
 ```sh
-pnpm add superfuse-forge
+yarn add -D superfuse-forge
 ```
 
 3. Configure permission and remapping (e.g. with txt" for `remappings.txt`) by modifing:
@@ -87,6 +88,9 @@ MNEMONIC="test test test test test test test test test test test junk"
 DEPLOYER_PRIVATE_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
 DEPLOYER_ADDRESS=0x70997970C51812dc3A010C7d01b50e0d17dc79C8
 ```
+
+>[!NOTE]
+>  The key or menemonic here must be secret and secure. you can configure it via our [Wizard](https://superfuse.ninja/), and the default values are based on above `.env`. You must choose your own secret. Otherwise, it does not mimic the production deployment environment.
 
 4. Modify  `.gitignore` as following.
 
