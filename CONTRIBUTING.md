@@ -4,8 +4,6 @@ Please make a pull request to [Dev Branch](https://github.com/Ratimon/superfuse-
 
 ### Developer's Quick Guide
 
-
-
 ### Publishing
 
 #### For First Time

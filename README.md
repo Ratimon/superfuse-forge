@@ -1,13 +1,28 @@
 <h1>Keep Optimistic and be Superchain dApp developer!! </h1>
 
-- [Quickstart](#quickstart)
 - [What is it for](#what-is-it-for)
+- [Quickstart](#quickstart)
 - [Architecture](#architecture)
 - [Contributing](#contributing)
 - [Acknowledgement](#acknowledgement)
 
 >[!NOTE]
 > You can find our relevant examples [`here`](https://github.com/Ratimon/superfuse-contracts-examples). Geneated contract code from the Superfuse Wizard is stored here due to documentation and testing purpose.
+
+## What Is It For
+
+One of our Swiss army knife toolset: **superfuse-forge** is a developer-friendly framework/library in solidity to build a variations of cross-chain contracts in superchain Ecosystem.
+
+The features include:
+
+- Type-safe smart contract deployment
+- Re-usable  smart contract deployment and testing pipeline
+- Standardized framework, minimizing developer mistake and enhancing better security
+- Save deployment schemas in **json** file
+- Separatable into each of modular and customizable deploy scripts
+- Based on All-Solidity, so no context switching, no new testing syntax
+
+Together with [`Redprint Wizard UI`](https://github.com/Ratimon/redprint-wizard), which is a code generator/ interactive playground oriented for OPStack development, it does not only help novice developers to deploy OPStack's smart contracts to deploy on OP mainnet, but also help them to use generated deployment script in their own projects.
 
 ## Quickstart
 
@@ -77,7 +92,7 @@ Then, add `remappings.txt` with following lines:
 > We use @<Lib>-v<Lib-Version>/ as a convention to avoid any naming conflicts with your previously installed libararies ( i.e. `@solady-0.0.292/` vs `@solady/`)
 
 >[!NOTE]
->  You can check out dependencies'versions [`here`](https://github.com/Ratimon/superfuse-forge/blob/main/package.json#L31). For example, all OPStack's contracts are based on [`v1.10.0`](https://github.com/ethereum-optimism/optimism/tree/v1.10.0/packages/contracts-bedrock).
+>  You can check out dependencies'versions [`here`](https://github.com/Ratimon/superfuse-forge/blob/main/package.json#L31).
 
 
 4. Copy `.env` as following.
